@@ -1,9 +1,11 @@
-version: 0.2
+version: 0.3
+
+
 
 phases:
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR
+      - echo Logging in to Amazon ECR 
       - aws --version
       - $(aws ecr get-login --no-include-email --region ap-south-1)
       - REPOSITORY_URI=572168080999.dkr.ecr.ap-south-1.amazonaws.com/demo-nodeapp
